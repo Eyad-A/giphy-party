@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     submit.addEventListener("click", async function fetch(e) {
     e.preventDefault();
     const keyword = document.getElementById("keyword").value;
-    const response = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`);
+    const response = await axios.get(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`);
     let numResults = response.data.data.length;
     if (numResults) {
         let randomIdx = Math.floor(Math.random() * numResults);    
